@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://emily:emily@cluster0-10xjc.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://emily:emily@cluster0-10xjc.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrecttoken"
 }

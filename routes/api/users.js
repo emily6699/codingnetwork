@@ -2,8 +2,10 @@ const express = require("express");
 const router = express.Router();
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const config = require("config");
 const { check, validationResult } = require("express-validator/check");
-const User = require("../../modles/Users");
+const User = require("../../models/Users");
 
 // @route    GET api/users
 // @desc     Register user
@@ -63,7 +65,25 @@ router.post(
       await user.save();
       //Return jsonwebtoken
 
-      res.send("User registered");
+      //create payload
+
+      const payload = {
+        user: {
+          id: user.id
+        }
+      };
+      // refer to the documentation https://github.com/auth0/node-jsonwebtoken
+      jwt.sign(
+        payload,
+        //get token from config where we set the jwttoken
+        config.get("jwtSecret"),
+        { expiresIn: 360000 },
+        (err, token) => {
+          if (err) throw err;
+          //if no err, then send the token back to the client
+          res.json({ token });
+        }
+      );
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");
