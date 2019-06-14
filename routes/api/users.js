@@ -39,9 +39,10 @@ router.post(
 
       // Get users gravatar
       const avatar = gravatar.url(email, {
-        size: "200",
+        //d:size, r: rating, d:default
+        s: "200",
         r: "pg",
-        default: "mm"
+        d: "mm"
       });
 
       // create instance of a user
@@ -58,14 +59,14 @@ router.post(
       const salt = await bcrypt.genSalt(10);
       // store the password in a hash by bcrypt
       user.password = await bcrypt.hash(password, salt);
-
+      // save the user to the database
       await user.save();
       //Return jsonwebtoken
 
       res.send("User registered");
     } catch (err) {
       console.error(err.message);
-      res.status(500).send("Server error");
+      res.status(500).send("Server Error");
     }
   }
 );
