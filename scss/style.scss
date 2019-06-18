@@ -1,0 +1,24 @@
+// $primary-color: red;
+
+// body {
+//   background: $primary-color;
+// }
+@import "config";
+* {
+  box-sizing: boder-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  // 1 rem is the default size of html which is 16px
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
