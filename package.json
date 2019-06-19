@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "devserver": "live-server --browser=Chrome"
   },
   "author": "Emily Lu",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "express-validator": "^5.3.1",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+    "live-server": "^1.2.1",
     "mongoose": "^5.5.15",
     "request": "^2.88.0"
   },
