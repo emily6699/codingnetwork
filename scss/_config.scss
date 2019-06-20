@@ -1,6 +1,6 @@
-$primary-color: #f1f2f6;
+$primary-color: #d6d7dd;
 $dark-color: #353b48;
-$light-color: #c8d6e5;
+$light-color: #98a5b3;
 $danger-color: #f6e58d;
 $success-color: #b8e994;
 $max-width: 1100px;
@@ -19,4 +19,30 @@ $max-width: 1100px;
   //$color: whatever color it's passed in
   background-color: $color;
   color: set-text-color($color);
+}
+// Margin & Padding
+
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  //All around margin
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+
+  //Vertical Margin
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  @each $space in $spaceamounts {
+    //All around margin
+    .p-#{$space} {
+      padding: #{$space}rem;
+    }
+
+    //Vertical Margin
+    .py-#{$space} {
+      padding: #{$space}rem 0;
+    }
+  }
 }
