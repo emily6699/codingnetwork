@@ -1,6 +1,6 @@
-$primary-color: #d6d7dd;
-$dark-color: #353b48;
-$light-color: #98a5b3;
+$primary-color: #67a0e0;
+$dark-color: #121e38;
+$light-color: #dfe7ec;
 $danger-color: #f6e58d;
 $success-color: #b8e994;
 $max-width: 1100px;
@@ -10,7 +10,7 @@ $max-width: 1100px;
   @if (lightness($color) > 50) {
     @return #333;
   } @else {
-    @return #fff;
+    @return rgb(173, 175, 197);
   }
 }
 

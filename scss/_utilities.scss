@@ -24,6 +24,13 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+.text-primary {
+  color: $primary-color;
+}
+
+.round-img {
+  border-radius: 50%;
+}
 
 //Backgrounds
 .bg {
@@ -52,7 +59,7 @@
 //Buttons
 .btn {
   display: inline-block;
-  background: $light-color;
+  background: $primary-color;
   color: #333;
   padding: 0.4rem 1.3rem;
   border: none;
@@ -65,7 +72,7 @@
   &.btn-primary {
     @include set-background($primary-color);
     &:hover {
-      background: #a4b0be;
+      background: #4f7197;
     }
   }
   &.btn-dark {
