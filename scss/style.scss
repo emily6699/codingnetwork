@@ -42,9 +42,9 @@ img {
   opacity: 0.9;
 }
 
-// ul {
-//   display: flex;
-// }
+ul {
+  display: flex;
+}
 
 a {
   color: #a2afc2;
@@ -113,6 +113,16 @@ a {
   }
   .profile-about {
     grid-area: about;
+    text-align: center;
+    // margin: 10px;
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      margin: 10px;
+    }
   }
 
   .profile-exp {
@@ -121,6 +131,23 @@ a {
 
   .profile-edu {
     grid-area: edu;
+  }
+
+  .profile-exp,
+  .profile-edu {
+    & > div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: #ccc 1px dotted;
+    }
+
+    &.last-child {
+      border: none;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
   }
   .profile-github {
     grid-area: github;
