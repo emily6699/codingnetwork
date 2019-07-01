@@ -19,9 +19,11 @@ if (localStorage.token) {
 }
 
 const App = () => {
+  // useEffect Hook is similar to componentDidMound, componentDidUpdate and componentWillUnmount combined
+  //by adding [] at the end is to run an effect and dlean it up only once(on mount and unmount)
   useEffect(() => {
     store.dispatch(loadUser());
-  });
+  }, []);
 
   return (
     <Provider store={store}>

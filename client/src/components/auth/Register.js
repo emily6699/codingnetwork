@@ -88,7 +88,7 @@ const Register = ({ setAlert, register }) => {
 };
 
 Register.prototypes = {
-  // pftr for shorthand
+  // ptfr for shorthand
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired
 };
