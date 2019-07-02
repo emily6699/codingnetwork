@@ -6,44 +6,44 @@ import { logout } from "../../actions/auth";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
-    <ul class="navlist">
+    <ul className='navlist'>
       <li>
-        <Link to="/dashboard">
-          <i class="fas fa-user-ninja" />
+        <Link to='/dashboard'>
+          <i className='fas fa-user-ninja' />
           {"  "}
-          <span className="hide-sm">Dashboard</span>
+          <span className='hide-sm'>Dashboard</span>
         </Link>
       </li>
       <li>
-        <a onClick={logout} href="#!">
-          <i class="fas fa-sign-out-alt" />
+        <a onClick={logout} href='#!'>
+          <i className='fas fa-sign-out-alt' />
           {"  "}
-          <span className="hide-sm">Logout</span>
+          <span className='hide-sm'>Logout</span>
         </a>
       </li>
     </ul>
   );
 
   const guestLinks = (
-    <ul class="navlist">
+    <ul className='navlist'>
       <li>
-        <Link to="#!"> Developers</Link>
+        <Link to='#!'> Developers</Link>
       </li>
       <li>
-        <Link to="/register"> Register</Link>
+        <Link to='/register'> Register</Link>
       </li>
       <li>
-        <Link to="/login"> Login</Link>
+        <Link to='/login'> Login</Link>
       </li>
     </ul>
   );
 
   return (
-    <nav className="navbar bg-dark">
+    <nav className='navbar bg-dark'>
       <h1>
-        <Link to="/">
+        <Link to='/'>
           {" "}
-          <i className="fas fa-code" /> CodingNetwork{" "}
+          <i className='fas fa-code' /> CodingNetwork{" "}
         </Link>
       </h1>
       {/* && is used for if !loading, then we do this, which is to check whehter
