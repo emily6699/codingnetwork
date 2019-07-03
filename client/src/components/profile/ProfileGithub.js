@@ -28,6 +28,20 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
                   {repo.name}
                 </a>
               </h4>
+              <p>{repo.description}</p>
+            </div>
+            <div>
+              <ul>
+                <li className='badge badge-primary'>
+                  Stars: {repo.stargazers_count}
+                </li>
+                <li className='badge badge-dark'>
+                  Watcher: {repo.watchers_count}
+                </li>
+                <li className='badge badge-primary'>
+                  Forks: {repo.forks_count}
+                </li>
+              </ul>
             </div>
           </div>
         ))
