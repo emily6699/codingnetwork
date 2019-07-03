@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import DashboardActions from "./DashboardActions";
+import Experience from "./experience";
+
 import { getCurrentProfile } from "../../actions/profile";
 
 const Dashboard = ({
@@ -18,18 +20,19 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className="large text-primary"> Dashboard</h1>
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome {user && user.name}
+      <h1 className='large text-primary'> Dashboard</h1>
+      <p className='lead'>
+        <i className='fas fa-user' /> Welcome {user && user.name}
       </p>
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
+          <Experience experience={profile.experience} />
         </Fragment>
       ) : (
         <Fragment>
           <p>You don't have a profile, please add some info!</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
+          <Link to='/create-profile' className='btn btn-primary my-1'>
             Create Profile
           </Link>
         </Fragment>
