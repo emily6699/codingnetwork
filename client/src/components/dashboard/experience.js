@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 
 const experience = ({ experience }) => {
   const experiences = experience.map(exp => (
-    <td key={exp._id}>
+    <tr key={exp._id}>
       <td>{exp.company}</td>
       <td className='hide-sm'>{exp.title}</td>
       <td>
@@ -17,10 +17,10 @@ const experience = ({ experience }) => {
           <Moment format='YYYY/MM/DD'>{exp.to}</Moment>
         )}
       </td>
-      <td>
+      <tr>
         <button className='btn btn-danger'>Delete</button>
-      </td>
-    </td>
+      </tr>
+    </tr>
   ));
 
   return (
