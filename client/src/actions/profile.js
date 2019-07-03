@@ -30,7 +30,7 @@ export const getCurrentProfile = () => async dispatch => {
 };
 
 // Get all profiles
-export const getAllProfile = () => async dispatch => {
+export const getProfiles = () => async dispatch => {
   dispatch({ type: CLEAR_PROFILE });
   try {
     // no need to get by id because it knows based on the loggin token
