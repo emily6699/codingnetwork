@@ -26,7 +26,7 @@ const EditProfile = ({
     instagram: ""
   });
 
-  const [displaySocialInputs, toggleSocialInputs] = useState(false);
+  //const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
   useEffect(() => {
     getCurrentProfile();
